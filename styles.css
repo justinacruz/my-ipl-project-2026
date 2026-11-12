@@ -1,0 +1,288 @@
+
+/* =================================
+   IPL TICKET BOOKING WEBSITE 2026
+   Colourful CSS Design
+================================= */
+
+/* Colour Variables */
+:root {
+    --primary: #101044;
+    --secondary: #5424a8;
+    --orange: #ff5722;
+    --yellow: #ffc107;
+    --purple: #7928ca;
+    --white: #ffffff;
+    --text: #252044;
+}
+
+/* Main Website Background */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: var(--text);
+
+    background: linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7,
+        #d7c5ff,
+        #b8e7ff,
+        #fff1b8
+    );
+
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    background: linear-gradient(
+        90deg,
+        #101044,
+        #34218b,
+        #7928ca
+    );
+
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid var(--yellow);
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 5px;
+}
+
+/* Navigation Bar */
+nav {
+    margin-top: 18px;
+}
+
+nav a {
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--yellow);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(
+        120deg,
+        #ff512f,
+        #dd2476,
+        #7928ca,
+        #34218b
+    );
+
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+    border-radius: 0 0 35px 35px;
+}
+
+.hero h2 {
+    font-size: 38px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* All Sections */
+section {
+    padding: 30px;
+    margin: 25px 15px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #fff0f5,
+        #e8e4ff
+    );
+
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(70, 30, 120, 0.18);
+}
+
+section h2 {
+    color: #5424a8;
+    border-left: 5px solid var(--orange);
+    padding-left: 12px;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(
+        90deg,
+        #ff5722,
+        #ff9800
+    );
+
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(
+        90deg,
+        #7928ca,
+        #34218b
+    );
+
+    transform: translateY(-2px);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: linear-gradient(
+        90deg,
+        #34218b,
+        #7928ca
+    );
+
+    color: white;
+    padding: 15px;
+}
+
+td {
+    border: 1px solid #e1ddf5;
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #f3efff;
+}
+
+tr:hover {
+    background: #ffe7d9;
+}
+
+/* Input Fields and Dropdowns */
+input,
+select {
+    width: 95%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 2px solid #d8d0f5;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #7928ca;
+    box-shadow: 0 0 5px #c5a5ff;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.card {
+    background: linear-gradient(
+        135deg,
+        #e9e4ff,
+        #ffe4d6,
+        #d8f3ff
+    );
+
+    padding: 22px;
+    border-radius: 14px;
+    flex: 1;
+    min-width: 180px;
+    border-bottom: 4px solid #ff5722;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(50, 30, 100, 0.15);
+}
+
+/* Booking Layout */
+.booking-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.booking-layout > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(
+        90deg,
+        #101044,
+        #6516a5,
+        #34218b
+    );
+
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-top: 5px solid var(--yellow);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    section {
+        padding: 18px;
+        margin: 12px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+    }
+
+    .booking-layout {
+        flex-direction: column;
+    }
+}
