@@ -1,362 +1,175 @@
 
-/* =================================
-   IPL TICKET BOOKING WEBSITE 2026
-   Colourful CSS Design
-================================= */
-
-/* Colour Variables */
-:root {
-    --primary: #101044;
-    --secondary: #5424a8;
-    --orange: #ff5722;
-    --yellow: #ffc107;
-    --purple: #7928ca;
-    --white: #ffffff;
-    --text: #252044;
-}
-
-/* Main Website Background */
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    color: var(--text);
-
-    background: linear-gradient(
-        135deg,
-        #ffdde1,
-        #ee9ca7,
-        #d7c5ff,
-        #b8e7ff,
-        #fff1b8
-    );
-
-    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background: #f3f6fc;
+    color: #222;
 }
 
-/* Header */
 header {
-    background: linear-gradient(
-        90deg,
-        #101044,
-        #34218b,
-        #7928ca
-    );
-
+    background: #101d42;
     color: white;
-    padding: 25px;
-    text-align: center;
-    border-bottom: 5px solid var(--yellow);
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
-    font-size: 32px;
     margin: 5px;
-}
-
-/* Navigation Bar */
-nav {
-    margin-top: 18px;
 }
 
 nav a {
     color: white;
-    margin: 12px;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    margin: 10px;
 }
 
 nav a:hover {
-    color: var(--yellow);
+    color: #8ec5ff;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(
-        120deg,
-        #ff512f,
-        #dd2476,
-        #7928ca,
-        #34218b
-    );
-
-    color: white;
-    text-align: center;
-    padding: 85px 20px;
-    border-radius: 0 0 35px 35px;
-}
-
-.hero h2 {
-    font-size: 38px;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-/* All Sections */
 section {
-    padding: 30px;
-    margin: 25px 15px;
-
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #fff0f5,
-        #e8e4ff
-    );
-
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(70, 30, 120, 0.18);
+    padding: 35px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
 }
 
-section h2 {
-    color: #5424a8;
-    border-left: 5px solid var(--orange);
-    padding-left: 12px;
-}
-
-/* Buttons */
-button {
-    background: linear-gradient(
-        90deg,
-        #ff5722,
-        #ff9800
-    );
-
+.hero {
+    text-align: center;
+    background: linear-gradient(120deg, #142b59, #2864a7);
     color: white;
-    padding: 12px 22px;
+    padding: 65px 20px;
+}
+
+.btn, button {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    padding: 11px 18px;
     border: none;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
     cursor: pointer;
-    transition: 0.3s;
+    margin: 6px 3px;
 }
 
-button:hover {
-    background: linear-gradient(
-        90deg,
-        #7928ca,
-        #34218b
-    );
-
-    transform: translateY(-2px);
+button:hover, .btn:hover {
+    background: #0d477a;
 }
 
-/* Tables */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 7px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    overflow-wrap: anywhere;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
 }
 
 th {
-    background: linear-gradient(
-        90deg,
-        #34218b,
-        #7928ca
-    );
-
+    background: #142b59;
     color: white;
-    padding: 15px;
 }
 
-td {
-    border: 1px solid #e1ddf5;
-    padding: 12px;
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background: #f3efff;
-}
-
-tr:hover {
-    background: #ffe7d9;
-}
-
-/* Input Fields and Dropdowns */
-input,
-select {
-    width: 95%;
-    padding: 12px;
-    margin: 8px 0 15px;
-    border: 2px solid #d8d0f5;
-    border-radius: 8px;
-    outline: none;
-    font-size: 14px;
-}
-
-input:focus,
-select:focus {
-    border-color: #7928ca;
-    box-shadow: 0 0 5px #c5a5ff;
-}
-
-/* Cards */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+.booking-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
 }
 
 .card {
-    background: linear-gradient(
-        135deg,
-        #e9e4ff,
-        #ffe4d6,
-        #d8f3ff
-    );
-
-    padding: 22px;
-    border-radius: 14px;
-    flex: 1;
-    min-width: 180px;
-    border-bottom: 4px solid #ff5722;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(50, 30, 100, 0.15);
-}
-
-/* Booking Layout */
-.booking-layout {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.booking-layout > div {
-    flex: 1;
-    min-width: 250px;
-}
-
-/* Footer */
-footer {
-    background: linear-gradient(
-        90deg,
-        #101044,
-        #6516a5,
-        #34218b
-    );
-
-    color: white;
-    text-align: center;
-    padding: 25px;
-    border-top: 5px solid var(--yellow);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-
-    nav a {
-        display: inline-block;
-        margin: 8px;
-    }
-
-    section {
-        padding: 18px;
-        margin: 12px;
-    }
-
-    .hero h2 {
-        font-size: 27px;
-    }
-
-    table {
-        font-size: 12px;
-    }
-
-    th,
-    td {
-        padding: 7px;
-    }
-
-    .booking-layout {
-        flex-direction: column;
-    }
-}
-
-/* Activity 3 - Booking Form */
-
-.booking-page {
-    max-width: 750px;
-    margin: 35px auto;
-    padding: 35px;
-
-    background: linear-gradient(
-        135deg,
-        #ffffff,
-        #ffe4f0,
-        #e5dcff,
-        #d9f3ff
-    );
-
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(70, 30, 120, 0.2);
-}
-
-.booking-page h2 {
-    text-align: center;
-    color: #7928ca;
-}
-
-.booking-page p {
-    text-align: center;
-}
-
-.booking-page form > label {
-    display: block;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.booking-page fieldset {
-    margin-top: 20px;
-    padding: 18px;
-    border: 2px solid #c5a5ff;
+    background: #eaf2ff;
+    padding: 20px;
     border-radius: 10px;
+    margin: 10px 0;
 }
 
-.booking-page legend {
-    color: #7928ca;
-    font-weight: bold;
-}
-
-.booking-page fieldset label {
-    display: block;
-    margin: 12px 0;
-}
-
-.booking-page fieldset input {
-    width: auto;
-}
-
-.form-buttons {
-    display: flex;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    justify-content: center;
-    margin-top: 25px;
-    flex-wrap: wrap;
 }
 
 .reset-btn {
-    background: linear-gradient(90deg, #5424a8, #34218b);
+    background: #777;
 }
 
-@media (max-width: 600px) {
-    .booking-page {
-        margin: 15px;
+footer {
+    text-align: center;
+    background: #101d42;
+    color: white;
+    padding: 20px;
+}
+
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #142b59;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+#toast.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .booking-layout, .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
         padding: 20px;
+        margin: 10px;
+        overflow-x: auto;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
     }
 }
